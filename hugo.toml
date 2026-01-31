@@ -1,6 +1,10 @@
-baseURL = 'https://southgatecyclingclub.co.uk/'
+baseURL = 'https://stxwright.github.io/southgate/'
 languageCode = 'en-gb'
 title = 'Southgate Cycling Club'
+
+# Normalize URLs for sub-folder hosting
+canonifyURLs = true
+relativeURLs = true
 
 # Enable future content (rides)
 buildFuture = true

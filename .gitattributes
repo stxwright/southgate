@@ -1,0 +1,21 @@
+# Set default behavior to automatically normalize line endings:
+* text=auto
+
+# Force LF for all text files in the repository, 
+# but allow CRLF in the Windows working copy:
+*.html text
+*.md text
+*.toml text
+*.css text
+*.js text
+*.csv text
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+
+# Denote binary files (don't touch line endings):
+*.exe binary
+*.jpg binary
+*.png binary
+*.webp binary
+*.JPG binary
+*.PNG binary
