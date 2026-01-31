@@ -97,6 +97,18 @@ article header {
   margin-bottom: 2rem;
 }
 
+.article-hero {
+  margin-bottom: 2rem;
+}
+
+.article-hero img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
 /* Main Content */
 main {
   padding: 3rem 0;
@@ -651,6 +663,41 @@ footer {
   .gazette-item {
     grid-template-columns: 1fr;
   }
+}
+
+/* Gazette Preview on Home */
+.gazette-grid-simple {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.gazette-card-simple {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+}
+
+.gazette-thumb img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.gazette-card-content {
+  padding: 1.5rem;
+}
+
+.gazette-card-content h3 {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+.gazette-card-content time {
+  font-size: 0.85rem;
+  color: var(--text-light);
 }
 
 /* Responsive */

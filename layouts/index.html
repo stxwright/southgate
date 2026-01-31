@@ -8,12 +8,13 @@
         {{ .Content }}
     </div>
     
-    {{ if .Site.Data.events }}
+    {{ $threshold := now.AddDate 0 0 -6 }}
+    {{ $upcoming := (where (where .Site.RegularPages "Section" "rides") "Date" "ge" $threshold) }}
+    {{ if $upcoming }}
     <section class="upcoming-events">
         <h2>Upcoming Rides</h2>
         <div class="events-list">
-            {{ $threshold := now.AddDate 0 0 -6 }}
-            {{ range first 3 (where (where .Site.RegularPages "Section" "rides") "Date" "ge" $threshold).ByDate }}
+            {{ range first 3 ($upcoming.ByDate) }}
             <div class="event-card">
                 <div class="event-date">
                     <span class="day">{{ .Date.Format "02" }}</span>
@@ -41,5 +42,25 @@
         <p class="view-all"><a href="{{ "/rides/" | relURL }}">View all rides →</a></p>
     </section>
     {{ end }}
+
+    <section class="gazette-preview">
+        <h2>Latest from the Gazette</h2>
+        <div class="gazette-grid-simple">
+            {{ range first 3 (where .Site.RegularPages "Section" "gazette") }}
+            <div class="gazette-card-simple">
+                {{ if .Params.image }}
+                <div class="gazette-thumb">
+                    <a href="{{ .Permalink }}"><img src="{{ .Params.image }}" alt="{{ .Title }}"></a>
+                </div>
+                {{ end }}
+                <div class="gazette-card-content">
+                    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                    <time>{{ .Date.Format "January 2, 2006" }}</time>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        <p class="view-all"><a href="{{ "/gazette/" | relURL }}">View more news →</a></p>
+    </section>
 </article>
 {{ end }}
