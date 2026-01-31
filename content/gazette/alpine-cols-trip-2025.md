@@ -1,8 +1,8 @@
 ---
 image: "/images/gazette/Screenshot_2025-10-10_145630-1920w.png"
 title: "Alpine Cols Trip 2025"
-date: 2026-01-31
-author: "Southgate Cycling Club"
+date: 2025-10-10
+author: "Sean Fanning"
 ---
 
 ![](/images/gazette/Screenshot_2025-10-10_145630-1920w.png)

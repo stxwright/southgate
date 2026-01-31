@@ -9,7 +9,7 @@
     </div>
     
     <div class="gazette-list">
-        {{ range .Pages.ByDate.Reverse }}
+        {{ range (where .Site.RegularPages "Section" "gazette").ByDate.Reverse }}
         <article class="gazette-item">
             {{ if .Params.image }}
             <div class="gazette-image">

@@ -1,8 +1,8 @@
 ---
 image: "/images/gazette/pexels-photo-1149601-1920w.jpeg"
 title: "Club Runs 11th Feb - 21st April"
-date: 2026-01-31
-author: "Southgate Cycling Club"
+date: 2024-02-14
+author: "Luke Holmes"
 ---
 
 ### Spring is coming.....

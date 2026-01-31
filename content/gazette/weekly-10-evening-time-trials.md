@@ -1,8 +1,8 @@
 ---
 image: "/images/gazette/pexels-photo-7932110-1920w.jpeg"
 title: "Weekly 10 - Evening Time Trials - Starting 14th June"
-date: 2026-01-31
-author: "Southgate Cycling Club"
+date: 2023-06-09
+author: "Luke Holmes"
 ---
 
 ### Time for the Race of Truth.......

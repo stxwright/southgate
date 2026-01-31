@@ -1,8 +1,8 @@
 ---
 image: "/images/gazette/End_of_Season_4-1920w.jpg"
 title: "End of Season Tour (The Marmite Tour!)"
-date: 2026-01-31
-author: "Southgate Cycling Club"
+date: 2022-10-23
+author: "Tat Emin Hassan"
 ---
 
 ### Love it or Hate It

@@ -1,8 +1,8 @@
 ---
 image: "/images/gazette/bicycle-black-1920w.jpg"
 title: "Spring - Summer Runs List"
-date: 2026-01-31
-author: "Southgate Cycling Club"
+date: 2023-05-07
+author: "Luke Holmes"
 ---
 
 Sun's Out - Bike's Out

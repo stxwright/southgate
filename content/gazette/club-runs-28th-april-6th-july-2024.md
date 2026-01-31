@@ -1,8 +1,8 @@
 ---
 image: "/images/gazette/pexels-photo-248547-1920w.jpeg"
 title: "Club Runs - 28th April - 6th July 2024"
-date: 2026-01-31
-author: "Southgate Cycling Club"
+date: 2024-04-29
+author: "Luke Holmes"
 ---
 
 ### Upcoming Club Runs

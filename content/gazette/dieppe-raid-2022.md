@@ -1,8 +1,8 @@
 ---
 image: "/images/gazette/Screenshot_2025-10-10_145458-1920w.png"
 title: "Dieppe Raid 2022"
-date: 2026-01-31
-author: "Southgate Cycling Club"
+date: 2022-10-20
+author: "Steve Brink"
 ---
 
 ### The Dieppe Raid 2022

@@ -2,8 +2,11 @@
 <article class="single-page">
     <header>
         <h1>{{ .Title }}</h1>
-        {{ if and .Date (or (eq .Section "gazette") (eq .Section "rides")) }}
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        {{ if or (eq .Section "gazette") (eq .Section "rides") }}
+        <div class="author-bar">
+            {{ if .Params.author }}<span>By {{ .Params.author }}</span>{{ end }}
+            {{ if .Date }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>{{ end }}
+        </div>
         {{ end }}
     </header>
 

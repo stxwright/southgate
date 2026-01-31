@@ -1,8 +1,8 @@
 ---
 image: "/images/gazette/b57d3361-5707-4b69-af66-7090da456a27-1920w.JPG"
 title: "In memory of Michael Lees"
-date: 2026-01-31
-author: "Southgate Cycling Club"
+date: 2024-04-29
+author: "Steve Bagland"
 ---
 
 ### Remembering our Dear Friend and club member

@@ -1,8 +1,8 @@
 ---
 image: "/images/gazette/Tour_Map-1920w.PNG"
 title: "Tour'a Jura"
-date: 2026-01-31
-author: "Southgate Cycling Club"
+date: 2022-10-23
+author: "Steve Brink"
 ---
 
 ### A week in the Jura (the Franche-Comté region)

@@ -1,8 +1,8 @@
 ---
 image: "/images/gazette/pexels-photo-10628142-1920w.jpeg"
 title: "Winter Runs List"
-date: 2026-01-31
-author: "Southgate Cycling Club"
+date: 2022-11-25
+author: "Luke Holmes"
 ---
 
 Training Runs: Saturday and Sunday at 9am from Cafe Nero in Enfield Town - usually go for a 40-60 mile circular ride at a fast-ish training pace, without stops.
