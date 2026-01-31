@@ -1,0 +1,29 @@
+# Hugo
+public/
+resources/_gen/
+.hugo_build.lock
+hugo_stats.json
+
+# Scraper & Migration Data
+scraped_content/
+archive/
+_data/
+new_site/
+
+# Migration & Maintenance Scripts
+*.py
+!generate_routes.py  # Keep this one as it's useful for ongoing route management
+
+# Local Environment & OS
+.env
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/

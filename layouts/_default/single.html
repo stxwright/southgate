@@ -1,0 +1,47 @@
+{{ define "main" }}
+<article class="single-page">
+    <header>
+        <h1>{{ .Title }}</h1>
+        {{ if and .Date (or (eq .Section "gazette") (eq .Section "rides")) }}
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        {{ end }}
+    </header>
+    
+    <div class="content">
+        {{ .Content }}
+    </div>
+    
+    {{ if .Params.route }}
+        {{ $route := .Site.GetPage (printf "/routes/%s" .Params.route) }}
+        {{ if $route }}
+        <div class="referenced-route">
+            <h2>Route: {{ $route.Title }}</h2>
+            <div class="route-meta">
+                <span>📏 {{ $route.Params.distance }} miles</span>
+                {{ if $route.Params.elevation }}<span>⛰️ {{ $route.Params.elevation }}m</span>{{ end }}
+                {{ if $route.Params.difficulty }}<span>📊 {{ $route.Params.difficulty }}</span>{{ end }}
+            </div>
+            {{ if $route.Params.ridewithgps_id }}
+            <div class="route-map">
+                <iframe src="https://ridewithgps.com/routes/{{ $route.Params.ridewithgps_id }}/embed" 
+                        style="width: 1px; min-width: 100%; height: 500px; border: none;" 
+                        scrolling="no">
+                </iframe>
+            </div>
+            <p><a href="{{ $route.Permalink }}" class="btn">View Full Route Details</a></p>
+            {{ end }}
+        </div>
+        {{ end }}
+    {{ end }}
+    
+    {{ if .Params.ridewithgps_id }}
+    <div class="route-map">
+        <h2>Route Map</h2>
+        <iframe src="https://ridewithgps.com/routes/{{ .Params.ridewithgps_id }}/embed" 
+                style="width: 1px; min-width: 100%; height: 500px; border: none;" 
+                scrolling="no">
+        </iframe>
+    </div>
+    {{ end }}
+</article>
+{{ end }}

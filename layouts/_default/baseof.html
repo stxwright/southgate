@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    {{ block "head" . }}{{ end }}
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="/">
+                    <img src="{{ .Site.Params.logo_url }}" alt="{{ .Site.Title }}" />
+                    <span>{{ .Site.Title }}</span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    {{ range .Site.Menus.main }}
+                    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                    {{ end }}
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>{{ .Site.Title }}</h3>
+                    <p>{{ .Site.Params.description }}</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/join/">Join the Club</a></li>
+                        <li><a href="/rides/">Upcoming Rides</a></li>
+                        <li><a href="/routes/">Route Library</a></li>
+                        <li><a href="/cafes/">Cafe Stops</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="https://www.strava.com/clubs/{{ .Site.Params.strava_club }}" target="_blank">Strava</a></li>
+                        <li><a href="{{ .Site.Params.cycling_uk }}" target="_blank">Cycling UK</a></li>
+                        <li><a href="{{ .Site.Params.british_cycling }}" target="_blank">British Cycling</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; {{ now.Year }} {{ .Site.Title }}. Established {{ .Site.Params.club_founded }}.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+    {{ block "scripts" . }}{{ end }}
+</body>
+</html>

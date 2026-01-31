@@ -1,0 +1,38 @@
+route_id,name,distance,elevation,difficulty,category,ridewithgps_id,description,cafe_stop
+1,"[SCC] 113k Chesham (Poppins) Berkhamsted",70,1078,Challenging,long,42836556,A club route to Chesham (Poppins) Berkhamsted.,TBC
+2,"[SCC] 070k Ware",44,826,Challenging,medium,41941406,A club route to Ware.,TBC
+3,"[SCC] 085k Leaden Roding",53,629,Moderate,medium,39519033,A club route to Leaden Roding.,TBC
+4,"[SCC] 167k Cambridge",104,1138,Moderate,long,38496407,A club route to Cambridge.,TBC
+5,"[SCC] 090k Great Offley",56,699,Moderate,long,38359869,A club route to Great Offley.,TBC
+6,"[SCC] 084k King's Walden",52,641,Moderate,medium,37571346,A club route to King's Walden.,TBC
+7,"[SCC] 068k Ware",43,590,Moderate,medium,37327093,A club route to Ware.,TBC
+8,"[SCC] 171k Cambridge",106,1259,Moderate,long,36493043,A club route to Cambridge.,TBC
+9,"[TT] Brickendon F7/9.2 Course",9,140,Easy,short,36332268,A club route to Brickendon F7/9.2 Course.,TBC
+10,"[SCC] 248k London Revolution",154,2449,Challenging,long,36201709,A club route to London Revolution.,TBC
+11,"[SCC] 152k Heybridge Basin",94,1374,Moderate,long,35689971,A club route to Heybridge Basin.,TBC
+12,"[SCC] 116k Hanningfield via Norton Heath",72,1027,Moderate,long,35689908,A club route to Hanningfield via Norton Heath.,TBC
+13,"[SCC] 079k Nether Street",49,591,Moderate,medium,35689882,A club route to Nether Street.,TBC
+14,"[SCC] 096k Great Offley",59,693,Moderate,long,35670883,A club route to Great Offley.,TBC
+15,"[SCC] 067k Roydon",42,514,Moderate,medium,35617468,A club route to Roydon.,TBC
+16,"[SCC] 092k Gaddesden Row",57,649,Moderate,long,35617380,A club route to Gaddesden Row.,TBC
+17,"[SCC] 113k Berkhamsted",70,1078,Challenging,long,35617283,A club route to Berkhamsted.,TBC
+18,"[SCC] 084k Tewin / Dane End",52,826,Challenging,medium,35611763,A club route to Tewin / Dane End.,TBC
+19,"[SCC] 100k Chesham",62,984,Challenging,long,35606949,A club route to Chesham.,TBC
+20,"[TT] Brickendon 25km",15,188,Easy,short,35606823,A club route to Brickendon 25km.,TBC
+21,"[TT] F7A/10",10,133,Easy,short,35606800,A club route to F7A/10.,TBC
+22,"[SCC] 096k Easter",59,686,Moderate,long,35589141,A club route to Easter.,TBC
+23,"[SCC] 122k Dunmow",76,914,Moderate,long,35544974,A club route to Dunmow.,TBC
+24,"[SCC] 100k Furneux Pelham",62,748,Moderate,long,34888067,A club route to Furneux Pelham.,TBC
+25,"[SCC] 077k Whitwell",48,648,Moderate,medium,34842804,A club route to Whitwell.,TBC
+26,"[SCC] 078k Norton Heath",49,705,Moderate,medium,34831876,A club route to Norton Heath.,TBC
+27,"[SCC] 102k Norton Heath and Epping Upland",64,858,Moderate,long,34831770,A club route to Norton Heath and Epping Upland.,TBC
+28,"[SCC] 158k Cromer, Saffron Walden",98,1613,Challenging,long,34752935,"A club route to Cromer, Saffron Walden.",TBC
+29,"[SCC] 084k Much Hadham",52,644,Moderate,medium,34454309,A club route to Much Hadham.,TBC
+30,"[SCC] 073k Digswell Viaduct",45,512,Moderate,medium,34454306,A club route to Digswell Viaduct.,TBC
+31,"[SCC] 095k Cromer",59,806,Moderate,long,34454304,A club route to Cromer.,TBC
+32,"[SCC] 094k Hatfield Heath",58,712,Moderate,long,34454301,A club route to Hatfield Heath.,TBC
+33,"[SCC] 104k Bison Hill",65,730,Moderate,long,34454289,A club route to Bison Hill.,TBC
+34,"[SCC] 121k Barton-le-Clay",75,1018,Moderate,long,34334444,A club route to Barton-le-Clay.,TBC
+35,"[SCC] 083k Hertingfordbury, Wheathampstead",51,647,Moderate,medium,34330374,"A club route to Hertingfordbury, Wheathampstead.",TBC
+36,"[SCC] 139k Saffron Walden",86,1314,Challenging,long,33950957,A club route to Saffron Walden.,TBC
+37,"[SCC] 116k Hanningfield Reservoir",72,1008,Moderate,long,32817696,A club route to Hanningfield Reservoir.,TBC

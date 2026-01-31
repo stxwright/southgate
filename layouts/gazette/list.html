@@ -1,0 +1,35 @@
+{{ define "main" }}
+<article class="gazette-page">
+    <header>
+        <h1>{{ .Title }}</h1>
+    </header>
+    
+    <div class="content">
+        <p>The latest news and ride reports from Southgate Cycling Club.</p>
+    </div>
+    
+    <div class="gazette-list">
+        {{ range .Pages.ByDate.Reverse }}
+        <article class="gazette-item">
+            {{ if .Params.image }}
+            <div class="gazette-image">
+                <a href="{{ .Permalink }}"><img src="{{ .Params.image }}" alt="{{ .Title }}"></a>
+            </div>
+            {{ end }}
+            <div class="gazette-content">
+                <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                <div class="author-bar">
+                    <span>By {{ .Params.author }}</span>
+                    <span>•</span>
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                </div>
+                {{ if .Summary }}
+                <p>{{ .Summary }}</p>
+                {{ end }}
+                <a href="{{ .Permalink }}" class="btn btn-sm">Read More</a>
+            </div>
+        </article>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

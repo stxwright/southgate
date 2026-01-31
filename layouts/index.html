@@ -1,0 +1,45 @@
+{{ define "main" }}
+<article class="home-page">
+    <header>
+        <h1>{{ .Title }}</h1>
+    </header>
+    
+    <div class="content">
+        {{ .Content }}
+    </div>
+    
+    {{ if .Site.Data.events }}
+    <section class="upcoming-events">
+        <h2>Upcoming Rides</h2>
+        <div class="events-list">
+            {{ $threshold := now.AddDate 0 0 -6 }}
+            {{ range first 3 (where (where .Site.RegularPages "Section" "rides") "Date" "ge" $threshold).ByDate }}
+            <div class="event-card">
+                <div class="event-date">
+                    <span class="day">{{ .Date.Format "02" }}</span>
+                    <span class="month">{{ .Date.Format "Jan" }}</span>
+                </div>
+                <div class="event-details">
+                    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                    <div class="event-meta">
+                        <span>⏰ {{ .Params.time }}</span>
+                        <span>📍 {{ .Params.location }}</span>
+                        
+                        {{ if .Params.route }}
+                            {{ $route := .Site.GetPage (printf "/routes/%s" .Params.route) }}
+                            {{ if $route }}
+                                <span>🗺️ <a href="{{ $route.Permalink }}">Route: {{ $route.Title }}</a></span>
+                            {{ end }}
+                        {{ end }}
+                        
+                        <span class="pace-badge pace-{{ .Params.pace }}">{{ .Params.pace | title }}</span>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        <p class="view-all"><a href="/rides/">View all rides →</a></p>
+    </section>
+    {{ end }}
+</article>
+{{ end }}

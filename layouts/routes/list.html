@@ -1,0 +1,92 @@
+{{ define "main" }}
+<article class="routes-page">
+    <header>
+        <h1>{{ .Title }}</h1>
+    </header>
+    
+    <div class="content">
+        {{ .Content }}
+    </div>
+
+    <div class="route-controls">
+        <div class="search-group">
+            <input type="text" id="route-search-main" placeholder="Search routes by name or destination..." />
+        </div>
+        <div class="filter-group">
+            <select id="route-filter-main">
+                <option value="">All Distances</option>
+                <option value="short">Short (< 30 miles)</option>
+                <option value="medium">Medium (30-55 miles)</option>
+                <option value="long">Long (55+ miles)</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="routes-table-container">
+        <table class="routes-table" id="routes-table">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Route Name</th>
+                    <th>Distance</th>
+                    <th>Profile</th>
+                    <th>Map</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{ range (where .Site.RegularPages "Section" "routes").ByParam "route_id" }}
+                <tr class="route-row" data-distance="{{ .Params.distance }}" data-category="{{ .Params.category }}">
+                    <td class="route-id">{{ .Params.route_id }}</td>
+                    <td class="route-info">
+                        <a href="{{ .Permalink }}" class="route-title">{{ .Title | replaceRE "^Route \\d+: " "" }}</a>
+                        <p class="route-desc">{{ .Params.description | truncate 100 }}</p>
+                    </td>
+                    <td class="route-dist">{{ .Params.distance }} miles</td>
+                    <td class="route-profile">
+                        <span class="difficulty-tag diff-{{ .Params.difficulty | lower }}">{{ .Params.difficulty }}</span>
+                        {{ if .Params.elevation }}<span class="elev-gain">{{ .Params.elevation }}m gain</span>{{ end }}
+                    </td>
+                    <td class="route-link">
+                        {{ if .Params.ridewithgps_id }}
+                        <a href="https://ridewithgps.com/routes/{{ .Params.ridewithgps_id }}" target="_blank" class="btn btn-sm">RWGPS</a>
+                        {{ end }}
+                    </td>
+                </tr>
+                {{ end }}
+            </tbody>
+        </table>
+    </div>
+</article>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('route-search-main');
+  const filterSelect = document.getElementById('route-filter-main');
+  const routeRows = document.querySelectorAll('.route-row');
+  
+  if (searchInput && filterSelect) {
+    function filterRoutes() {
+      const searchTerm = searchInput.value.toLowerCase();
+      const filterValue = filterSelect.value;
+      
+      routeRows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        const distance = parseInt(row.dataset.distance);
+        
+        let matchesSearch = text.includes(searchTerm);
+        let matchesFilter = true;
+        
+        if (filterValue === 'short') matchesFilter = distance < 30;
+        if (filterValue === 'medium') matchesFilter = distance >= 30 && distance <= 55;
+        if (filterValue === 'long') matchesFilter = distance > 55;
+        
+        row.style.display = (matchesSearch && matchesFilter) ? '' : 'none';
+      });
+    }
+    
+    searchInput.addEventListener('input', filterRoutes);
+    filterSelect.addEventListener('change', filterRoutes);
+  }
+});
+</script>
+{{ end }}

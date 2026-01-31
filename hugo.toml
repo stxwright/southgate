@@ -1,0 +1,109 @@
+baseURL = 'https://southgatecyclingclub.co.uk/'
+languageCode = 'en-gb'
+title = 'Southgate Cycling Club'
+
+# Enable future content (rides)
+buildFuture = true
+
+# Enable emoji support
+enableEmoji = true
+
+[params]
+  description = "Established in 1882, Southgate Cycling Club is one of the world's earliest cycling clubs. Based in Enfield, North London, we welcome riders of all abilities."
+  club_founded = 1882
+  meeting_point = 'Caffè Nero, Enfield Town'
+  meeting_time = '9:00 AM Sunday'
+  
+  # RideWithGPS integration
+  ridewithgps_club = 'southgate-cycling-club'
+  
+  # Image URLs (CDN)
+  logo_url = '/images/Southgate_CC_logo.png'
+  strava_icon = '/images/StravaV2-172w.jpg'
+  cycling_uk_icon = '/images/CyclingUKv2-1920w.jpg'
+  british_cycling_icon = '/images/BC-AFFILIATED-CLUB-RGB-DIGITAL-1920w.png'
+  lcc_icon = '/images/LondonCyclingCampaign-4b831bf8-37f32ba2-1920w.jpg'
+  rwgps_icon = '/images/RideWithGPS-1920w.JPG'
+
+  # Social links
+  strava_club = '38654'
+  cycling_uk = 'https://www.cyclinguk.org/local-groups/southgate-cycling-club'
+  british_cycling = 'https://www.britishcycling.org.uk/club/profile/864/southgate-cycling-club'
+
+[menu]
+  [[menu.main]]
+    name = 'Home'
+    url = '/'
+    weight = 1
+  
+  [[menu.main]]
+    name = 'Rides'
+    url = '/rides/'
+    weight = 2
+  
+  [[menu.main]]
+    name = 'Example Runs'
+    url = '/example-runs/'
+    weight = 3
+  
+  [[menu.main]]
+    name = 'Routes'
+    url = '/routes/'
+    weight = 4
+  
+  [[menu.main]]
+    name = 'Cafes'
+    url = '/cafes/'
+    weight = 5
+  
+  [[menu.main]]
+    name = 'Join'
+    url = '/join/'
+    weight = 6
+  
+  [[menu.main]]
+    name = 'Gallery'
+    url = '/gallery/'
+    weight = 7
+
+  [[menu.main]]
+    name = 'Gazette'
+    url = '/gazette/'
+    weight = 8
+
+  [[menu.main]]
+    name = 'Hill Climb'
+    url = '/hillclimb/'
+    weight = 9
+
+  [[menu.main]]
+    name = 'Club Kit'
+    url = '/club-kit/'
+    weight = 10
+
+  [[menu.main]]
+    name = 'Etiquette'
+    url = '/etiquette/'
+    weight = 11
+
+  [[menu.main]]
+    name = 'History'
+    url = '/history/'
+    weight = 12
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Allow HTML in markdown
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+  
+  # Set higher timeout for large pages
+  timeout = "10000ms"
+
+[outputs]
+  home = ['HTML', 'RSS']
+  page = ['HTML']
+  section = ['HTML', 'RSS']

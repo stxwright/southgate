@@ -1,0 +1,46 @@
+{{ define "main" }}
+<article class="rides-page">
+    <header>
+        <h1>{{ .Title }}</h1>
+    </header>
+    
+    <div class="content">
+        {{ .Content }}
+    </div>
+    
+    <div class="rides-calendar">
+        {{ $threshold := now.AddDate 0 0 -6 }}
+        {{ range (where .Site.Pages "Section" "rides").ByDate }}
+        {{ if and (not .IsSection) (ge .Date $threshold) }}
+        <div class="event-card">
+            <div class="event-date">
+                <span class="day">{{ .Date.Format "02" }}</span>
+                <span class="month">{{ .Date.Format "Jan" }}</span>
+            </div>
+            <div class="event-details">
+                <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                <div class="event-meta">
+                    <span>⏰ {{ .Params.time }}</span>
+                    <span>📍 {{ .Params.location }}</span>
+                    
+                    {{ if .Params.route }}
+                        {{ $route := .Site.GetPage (printf "/routes/%s" .Params.route) }}
+                        {{ if $route }}
+                            <span>🗺️ <a href="{{ $route.Permalink }}">Route: {{ $route.Title }}</a></span>
+                            <span>📏 {{ $route.Params.distance }} miles</span>
+                        {{ end }}
+                    {{ end }}
+                    
+                    <span class="pace-badge pace-{{ .Params.pace }}">{{ .Params.pace | title }}</span>
+                </div>
+                {{ if .Params.description }}
+                <p>{{ .Params.description }}</p>
+                {{ end }}
+                <p><a href="{{ .Permalink }}" class="btn btn-sm">View Ride Details</a></p>
+            </div>
+        </div>
+        {{ end }}
+        {{ end }}
+    </div>
+</article>
+{{ end }}
