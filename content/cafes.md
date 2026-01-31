@@ -5,14 +5,18 @@ date: 2026-01-31
 
 A collection of cyclist-friendly cafes around our riding areas in North London, Hertfordshire, and Essex. Opening times may vary, so it's worth checking ahead, especially for larger groups.
 
-<div class="cafe-search">
-  <input type="text" id="cafe-search" placeholder="Search cafes by name or area..." />
-  <select id="area-filter">
-    <option value="">All Areas</option>
-    <option value="hertfordshire">Hertfordshire</option>
-    <option value="essex">Essex</option>
-    <option value="london">London</option>
-  </select>
+<div class="route-controls">
+    <div class="search-group">
+        <input type="text" id="cafe-search-main" placeholder="Search cafes by name or destination..." />
+    </div>
+    <div class="filter-group">
+        <select id="area-filter-main">
+            <option value="">All Areas</option>
+            <option value="hertfordshire">Hertfordshire</option>
+            <option value="essex">Essex</option>
+            <option value="london">London</option>
+        </select>
+    </div>
 </div>
 
 ## Our Favorite Stops
@@ -37,18 +41,32 @@ A collection of cyclist-friendly cafes around our riding areas in North London, 
         <td>Meeting point! ☕</td>
       </tr>
       <tr data-area="hertfordshire">
-        <td>Sophie's</td>
-        <td>Hampsthwaite</td>
-        <td>4 miles NW</td>
-        <td>01423 779219</td>
-        <td>Cyclist friendly</td>
+        <td><a href="https://spokecycles.cc/" target="_blank">Spoke Cycles CC</a></td>
+        <td>Codicote</td>
+        <td>18 miles N</td>
+        <td>01438 488388</td>
+        <td>Strong cycling theme, workshop, custom coffee. 🚲</td>
+      </tr>
+      <tr data-area="hertfordshire">
+        <td><a href="https://www.theshedcoffeehouse.co.uk/" target="_blank">The Shed</a></td>
+        <td>Sawbridgeworth</td>
+        <td>16 miles NE</td>
+        <td>01279 723853</td>
+        <td>Located in The Maltings. Great coffee and very welcoming. ☕</td>
       </tr>
       <tr data-area="essex">
-        <td>Example Cafe</td>
-        <td>Example Town</td>
-        <td>8 miles E</td>
-        <td>01234 567890</td>
-        <td>Great coffee</td>
+        <td>The Village Tearoom</td>
+        <td>Blackmore</td>
+        <td>20 miles E</td>
+        <td>01277 821946</td>
+        <td>Located on The Green next to the Leather Bottle pub. A classic cycling stop! 🍰</td>
+      </tr>
+      <tr data-area="hertfordshire">
+        <td><a href="http://www.cafetrulyscrumptious.co.uk/" target="_blank">Truly Scrumptious Bistro</a></td>
+        <td>Ware</td>
+        <td>12 miles N</td>
+        <td>01920 460948</td>
+        <td>Perfect for relaxed, shorter rides.</td>
       </tr>
     </tbody>
   </table>
@@ -56,7 +74,7 @@ A collection of cyclist-friendly cafes around our riding areas in North London, 
 
 ## Adding a Cafe
 
-Know a great cafe we should include? [Contact us](/contact/) with the details!
+Know a great cafe we should include? Contact us with the details!
 
 We're particularly interested in cafes that:
 - Welcome groups of cyclists
@@ -66,8 +84,8 @@ We're particularly interested in cafes that:
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const searchInput = document.getElementById('cafe-search');
-  const areaFilter = document.getElementById('area-filter');
+  const searchInput = document.getElementById('cafe-search-main');
+  const areaFilter = document.getElementById('area-filter-main');
   const tableRows = document.querySelectorAll('#cafes-table tbody tr');
   
   function filterCafes() {

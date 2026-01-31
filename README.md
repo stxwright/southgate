@@ -9,7 +9,7 @@ A modern, high-performance Hugo-based website for Southgate Cycling Club.
    ./start.ps1
    ```
 2. **View your site:**
-   Open [http://localhost:1313](http://localhost:1313) in your browser.
+   Open [http://localhost:1313/southgate/](http://localhost:1313/southgate/) in your browser.
 
 ---
 
